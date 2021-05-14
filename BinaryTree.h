@@ -6,8 +6,40 @@
 #define BIN_TREE_BINARYTREE_H
 
 
-class BinaryTree {
+#include <memory>
 
+template <class T>
+class BinaryTree
+{
+    struct Node
+    {
+        T data{};
+        std::shared_ptr<Node> left;
+        std::shared_ptr<Node> right;
+    };
+
+public:
+
+    class Iterator
+    {
+        Iterator operator++();
+        T& operator*() const;
+    private:
+        std::weak_ptr<Node> data;
+    };
+
+    BinaryTree() = default;
+    BinaryTree(const BinaryTree&) = delete;
+    BinaryTree(BinaryTree&& ) = delete;
+    ~BinaryTree();
+
+    void add();
+
+    Iterator begin() const noexcept;
+    Iterator end() const noexcept;
+
+private:
+    std::shared_ptr<Node> root;
 };
 
 
