@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/user/Desktop/CRIMINAL/bin_tree/BinaryTree.cpp" "C:/Users/user/Desktop/CRIMINAL/bin_tree/cmake-build-debug/CMakeFiles/bin_tree.dir/BinaryTree.cpp.obj"
   "C:/Users/user/Desktop/CRIMINAL/bin_tree/main.cpp" "C:/Users/user/Desktop/CRIMINAL/bin_tree/cmake-build-debug/CMakeFiles/bin_tree.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

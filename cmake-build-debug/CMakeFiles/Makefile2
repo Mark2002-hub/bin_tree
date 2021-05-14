@@ -93,12 +93,12 @@ clean: CMakeFiles/bin_tree.dir/clean
 CMakeFiles/bin_tree.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\bin_tree.dir\build.make CMakeFiles/bin_tree.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\bin_tree.dir\build.make CMakeFiles/bin_tree.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\user\Desktop\CRIMINAL\bin_tree\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target bin_tree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\user\Desktop\CRIMINAL\bin_tree\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target bin_tree"
 .PHONY : CMakeFiles/bin_tree.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bin_tree.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\CRIMINAL\bin_tree\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\CRIMINAL\bin_tree\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/bin_tree.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\CRIMINAL\bin_tree\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/bin_tree.dir/rule

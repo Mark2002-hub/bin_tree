@@ -82,9 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/user/Desktop/CRIMINAL/bin_tree/BinaryTree.cpp">
-			<Option target="bin_tree"/>
-		</Unit>
 		<Unit filename="C:/Users/user/Desktop/CRIMINAL/bin_tree/BinaryTree.h">
 			<Option target="bin_tree"/>
 		</Unit>

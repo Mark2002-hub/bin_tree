@@ -18,6 +18,7 @@ class BinaryTree
         std::shared_ptr<Node> right;
 
         void clear();
+        std::shared_ptr<Node> next() const;
     };
 
 public:
@@ -42,6 +43,7 @@ public:
     Iterator end() const noexcept;
 
 private:
+    
     void add(std::shared_ptr<Node>& node, const T& value);
 
     std::shared_ptr<Node> root;
@@ -53,6 +55,13 @@ BinaryTree<T>::Iterator::Iterator(std::shared_ptr<Node> node)
 {}
 
 template<class T>
+BinaryTree::Iterator BinaryTree<T>::Iterator::operator++()
+{
+
+    return *this;
+}
+
+template<class T>
 void BinaryTree<T>::Node::clear()
 {
     if (left != nullptr)
@@ -61,6 +70,14 @@ void BinaryTree<T>::Node::clear()
         right->clear();
     left.reset();
     right.reset();
+}
+
+template<class T>
+std::shared_ptr<Node> BinaryTree<T>::Node::next()
+{
+    if (right == nullptr)
+        return nullptr;
+
 }
 
 template<class T>
