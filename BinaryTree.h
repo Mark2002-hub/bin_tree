@@ -24,6 +24,8 @@ public:
 
     class Iterator
     {
+        explicit Iterator(std::shared_ptr<Node> node);
+
         Iterator operator++();
         T& operator*() const;
     private:
@@ -44,6 +46,11 @@ private:
 
     std::shared_ptr<Node> root;
 };
+
+template<class T>
+BinaryTree<T>::Iterator::Iterator(std::shared_ptr<Node> node)
+    : data{node}
+{}
 
 template<class T>
 void BinaryTree<T>::Node::clear()
