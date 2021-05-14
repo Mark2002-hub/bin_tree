@@ -35,7 +35,8 @@ public:
     BinaryTree(BinaryTree&& ) = delete;
     ~BinaryTree();
 
-    void add();
+    void add(const T& value);
+    void add(T&& value);
 
     Iterator begin() const noexcept;
     Iterator end() const noexcept;
