@@ -16,6 +16,8 @@ class BinaryTree
         T data{};
         std::shared_ptr<Node> left;
         std::shared_ptr<Node> right;
+
+        void clear();
     };
 
 public:
@@ -41,6 +43,24 @@ public:
 private:
     std::shared_ptr<Node> root;
 };
+
+template<class T>
+void BinaryTree<T>::Node::clear()
+{
+    if (left != nullptr)
+        left->clear();
+    if (right != nullptr)
+        right->clear();
+    left.reset();
+    right.reset();
+}
+
+template<class T>
+BinaryTree<T>::~BinaryTree()
+{
+    if (root != nullptr)
+        root->clear();
+}
 
 
 #endif //BIN_TREE_BINARYTREE_H
