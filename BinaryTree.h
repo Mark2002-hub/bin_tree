@@ -32,16 +32,16 @@ public:
 
     BinaryTree() = default;
     BinaryTree(const BinaryTree&) = delete;
-    BinaryTree(BinaryTree&& ) = delete;
     ~BinaryTree();
 
     void add(const T& value);
-    void add(T&& value);
 
     Iterator begin() const noexcept;
     Iterator end() const noexcept;
 
 private:
+    void add(std::shared_ptr<Node>& node, const T& value);
+
     std::shared_ptr<Node> root;
 };
 
@@ -61,6 +61,26 @@ BinaryTree<T>::~BinaryTree()
 {
     if (root != nullptr)
         root->clear();
+}
+
+template<class T>
+void BinaryTree<T>::add(const T &value)
+{
+    add(root, value);
+}
+
+template<class T>
+void BinaryTree<T>::add(std::shared_ptr<Node> &node, const T &value)
+{
+    if (node == nullptr)
+        node->data = value;
+
+    if (node->data == value)
+        return;
+    if (value < node->data)
+        add(node->left, value);
+    if (value > node->data)
+        add(node->right, value);
 }
 
 
